@@ -1,0 +1,42 @@
+Guia para la personalizacion de la terminal tenemos que segir los siguientes pasos
+- Primero tenemos que descargar la fuente debida de la sigiente pagina: https://www.nerdfonts.com/
+- Dentro de la pagina nos iremos a la parte de descargas y buscaremos la fuente llamada "Hack Nerd Fonts", esto se puede hacer con el administrador de archivos o por consola
+  en caso de hacer por conosla vamos a dirigirnos al archivo mediante el comando 'cd' mas la ruta, que en este caso es /Downloads y por ultimo ejecutamos el comando 'unzip'
+  mas el nombre del archivo.
+- Con la funete ya instalada tenemos que ir al administrador de archivos, dirigirnos a Descargas e instalar la fuente llamada "HackNerdFontMono-Regular" o la de su preferencia
+- Ya con la fuente de nuestra prefecencia instalada lo que tenemos que hacer es ir a la terminal o consola, dar click derecho y entrear a preferencias(preferences).
+- Dentro de las preferencias nos dirigiremos al perfil por defecto que esta en la parte mas baja y seleccionamos la opcion de 'usar fuente presonalizada', seleccionamos nuestra
+  fuente y listo ya tendriamos todo para seguir. 
+- Despues de instalar la funete instalaremos: powerlevel10k y zsh
+- Para instalar la porwerlevel10k primero tenemos que verificar si tenemos instalado git para eso ejecutaremos el comando 'git --version'
+- En caso de tener git siguiemos con el siguiente paso si no ejecutamos el comando 'sudo apt install git' (Debian) o 'sudo pacman -S git' (redhat)
+- Con git instalado nos dirigimos al siguiente repositorio: https://github.com/romkatv/powerlevel10k.git
+- Dentro del repositorio nos dirigimos al manual que se encuentra mas abajo, en el cual nos dara las instrucciones para instalar la powerlevel10k.
+- Con los comandos del manual ya ejecutados procedemos a instalar 'zsh' con el comando 'sudo apt install zsh', para evitar acepar los permisos cada que instalamos un paquete podemos
+  agregar '-y' osea quedaria 'sudo apt install <nombre_del_paquete> -y'.
+- Ya con la powerlevel10k y zsh instalado en la terminal ponemos la instruccion 'zsh' con esto nos abrira una configuracion en la cual tenemos que seleccionar las diferentes opciones
+  con las teclas indicadas, en la parde donde se decide la parte estetica como colores, formas, etc es todo gusto la configuracion no tiene que quedar igual a la mia.
+- Ya con la personalizacion echa tenemos que ejecutar el comando 'chsh -s $(which zsh)' para que la terminal cambie de Bash a Zsh.
+- Con lo anterior ya realizado reiniciamos el sistema operativo ya sea con los botones de energia o desde la terminal con el comando 'sudo reboot'(forma segura y recomendable)
+- !Listo! Ya tenemos la terminal casi personalizada.
+- Para continuar instalaremos lsd que reemplaza a ls (commando de linux para listar archivos deste la terminal) y bat que reemplaza a cat (sirve para mostrar el contenido de ciertos
+  archivos).
+- Para la instalacion de ambos paquetes se usa el comando 'sudo dpkg -i <nombre_de_la_app>.deb', es importante recalcar que esto es para archivos con la extenxion '.deb' con punto y
+  todo.
+- Para la instalacion de lsd nos dirigimos a su git: https://github.com/lsd-rs/lsd.git
+- Dentro de su git nos dirigimos a la parte de 'Releases', entramos a la pagina y buscamos la ultima version el que sea para amd64 otras versiones no serviran
+- Luego la instalamos con el comando 'sudo dpkg -i <nombre_de_la_app>.deb.
+- La instalacion de bat es exactamente igual solo cambia el nombre de la app y ya, este es el git: https://github.com/sharkdp/bat.git
+- !Listo! Con esto ya tenemos una mejor version de cat y ls para usarlos tenemos que dirigirnos a la terminal y podremos usar lsd y bat se usa con archivos ya sean de texto, codigo etc.
+<-- AHORA VIENEN PERSONALIZACIONES QUE ESTAN A MI GUSTO OJALA LES AYUDE -->
+- Para evitar poner lsd en vez de ls creo alias en el archivo de configuracion de la zsh
+- Esto se hace mediante el archivo 'zshrc', esto lo hare con nano un editor de texto(con lo que estoy escribiendo esta mini guia jeje), esto se hace con el comando 'nano ~/.zshrc'
+- Dentro del archivo yo hago los siguientes alias:
+	# Custom Alias
+
+	#alias ls="lsd" -> Para usar lsd en vez de ls
+	#alias cat="/bin/bat" -> Para reemplazar bat en vez de cat
+	#alias ll="lsd -l" -> Lista TODOS los archivos
+	#alias la="lsd -a" -> lista todos los archivos
+
+- Con esto ya tenemos la mi configuracion para la terminal.
